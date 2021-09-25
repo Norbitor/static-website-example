@@ -10,6 +10,6 @@ jobs:
     name: 'Placeholder'
     runs-on: ubuntu-latest
 
-  steps:
-    - name: Hello
-      run: echo Hello!
+    steps:
+      - name: Hello
+        run: echo Hello!
