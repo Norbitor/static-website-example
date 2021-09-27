@@ -57,4 +57,5 @@ jobs:
         with:
             folder: .
             bucket: ${{ secrets.AWS_S3_BUCKET }}
+            bucket-region: ${{ secrets.AWS_S3_BUCKET_REGION }}
             dist-id: ${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION_ID }}
