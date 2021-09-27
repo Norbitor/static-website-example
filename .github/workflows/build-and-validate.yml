@@ -52,4 +52,9 @@ jobs:
           name: static-website-example-build
       - name: List the directory
         run: ls -la
-      
+      - name: Deploy to S3
+        uses: reggionick/s3-deploy@v3
+        with:
+            folder: .
+            bucket: ${{ secrets.AWS_S3_BUCKET }}
+            dist-id: ${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION_ID }}
