@@ -7,7 +7,6 @@ on: [push, pull_request]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
@@ -39,7 +38,7 @@ jobs:
 
   deploy:
     runs-on: ubuntu/latest
-    if: {{ github.ref == 'ref/head/master' }}
+    if: github.ref == 'ref/head/master'
 
     env:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
